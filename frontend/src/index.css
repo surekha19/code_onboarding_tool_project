@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile-first phone-like layout */
+:root{
+  --brand: #0b61ff;
+  --bg: #f3f6ff;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --success: #16a34a;
+  --danger: #ef4444;
+}
+html,body,#root { height:100%; }
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size: 18px;
+  background: linear-gradient(180deg, var(--bg), #ffffff);
+  display:flex;
+  justify-content:center;
+  padding: 20px;
+  margin:0;
+}
+.phone-shell {
+  width: 380px; /* phone width */
+  max-width: 95vw;
+  background: var(--card);
+  border-radius: 28px;
+  box-shadow: 0 8px 30px rgba(11,97,255,0.08);
+  overflow: auto;
+  min-height: 640px;
+  padding: 16px;
+}
+.header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+.brand {
+  font-weight:700;
+  color:var(--brand);
+  font-size:18px;
+}
+.large-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+.btn {
+  background: var(--brand);
+  color: white;
+  padding: 12px 14px;
+  border-radius: 12px;
+  display:inline-block;
+  font-weight:600;
+  text-align:center;
+  border: none;
+}
+.btn-ghost {
+  border: 2px solid rgba(15,23,42,0.06);
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: transparent;
+}
+.btn-complete {
+  background: var(--success);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight:600;
+  border: none;
+}
+.btn-incomplete {
+  background: var(--brand);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight:600;
+  border: none;
+}
+.card-grid {
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.small-muted { color: var(--muted); font-size: 0.95rem; }
+.input { width:100%; padding:12px; border-radius:10px; border:1px solid rgba(15,23,42,0.06); }
+.list-item { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:10px; border-radius:10px; border:1px solid rgba(15,23,42,0.04); }
+.progress-bar { height:10px; background: rgba(11,97,255,0.12); border-radius:999px; overflow:hidden; }
+.progress-fill { height:100%; background: linear-gradient(90deg,var(--brand),#6a9bff); }
+
+/* Pagination controls */
+.pagination { display:flex; gap:8px; align-items:center; justify-content:center; margin-top:12px; flex-wrap:wrap; }
+.page-btn { padding:8px 10px; border-radius:8px; border:1px solid rgba(15,23,42,0.06); background:white; cursor:pointer; min-width:38px; text-align:center; }
+.page-btn.active { background:var(--brand); color:white; font-weight:700; border-color:transparent; }
+.page-btn:disabled { opacity:0.45; cursor:not-allowed; }
+
+/* small screens - ensure comfortable spacing */
+@media (min-width: 800px){
+  .phone-shell{ width: 380px; }
+}
