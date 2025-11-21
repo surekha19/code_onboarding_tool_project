@@ -7,7 +7,6 @@ Structure:
 Usage:
 1) Run this Python script (regenerate_onboarding.py) to create/update files.
 2) Backend:
-   cd C:\Users\UTKRISHTS\Music\onboarding_tool_project_v2\onboarding_tool_project/backend
    npm install
    cp .env.example .env
    npm run migrate
@@ -15,7 +14,6 @@ Usage:
    npm run dev
 
 3) Frontend:
-   cd C:\Users\UTKRISHTS\Music\onboarding_tool_project_v2\onboarding_tool_project/frontend
    npm install
    cp .env.example .env
    npm run dev
@@ -23,3 +21,4 @@ Usage:
 Notes:
 - After starting servers, open http://localhost:5173 for the frontend.
 - Tailwind is pinned to v3.4.x for compatibility with scaffold.
+
